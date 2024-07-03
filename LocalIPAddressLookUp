@@ -1,0 +1,9 @@
+#Python Projects
+
+#Ip Address Look up on local machine
+
+import socket
+hostname = socket.gethostname()
+IPAddr = socket.gethostbyname(hostname)
+
+print("Your IP Address is " + IPAddr)
