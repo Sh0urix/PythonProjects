@@ -1,0 +1,22 @@
+def caesar(message, key, mode):
+    LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    translated = ''
+    message = message.upper()
+    key = key % 26
+
+    for i in message:
+        templetter = LETTERS.find(i)
+        if mode =='encrypt':
+            templetter += key
+            #print("Encrypt")
+        elif mode == 'decrypt':
+            templetter -= key
+            #print("Decrypt")
+        if templetter >= len(LETTERS):
+            templetter -= len(LETTERS)
+        elif templetter < 0:
+            templetter += len(LETTERS)
+        translated += LETTERS[templetter]
+    return translated
+
+print(caesar("IEHXGXE", 6, "decrypt"))
