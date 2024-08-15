@@ -12,7 +12,7 @@ def find_matching_words(file_path, pattern):
 
 # Example usage
 file_path = 'text_docu.txt'
-pattern = r'\w+@\w+.\w+'  # Example: find all 4-letter words
+pattern = r'\w+@\w+.\w+'  # Example: find an email address
 
 matching_words = find_matching_words(file_path, pattern)
 
