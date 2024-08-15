@@ -1,0 +1,19 @@
+import re
+
+def find_matching_words(file_path, pattern):
+    # Open the file in read mode
+    with open(file_path, 'r') as file:
+        content = file.read()
+    
+    # Find all words that match the pattern
+    matching_words = re.findall(pattern, content)
+    
+    return matching_words
+
+# Example usage
+file_path = 'text_docu.txt'
+pattern = r'\w+@\w+.\w+'  # Example: find all 4-letter words
+
+matching_words = find_matching_words(file_path, pattern)
+
+print("Matching words:", matching_words)
