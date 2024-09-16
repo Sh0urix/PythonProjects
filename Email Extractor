@@ -1,3 +1,5 @@
+#Remember to navigate to file location in IDE
+
 #Email Extractor
 
 import re
