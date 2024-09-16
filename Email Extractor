@@ -1,0 +1,20 @@
+#Email Extractor
+
+import re
+
+def extract_emails(file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+    
+    # Regular expression pattern for matching email addresses
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    
+    # Find all email addresses in the content
+    emails = re.findall(email_pattern, content)
+    
+    return emails
+
+# Example usage
+file_path = 'text_docu.txt'
+emails = extract_emails(file_path)
+print(emails)
