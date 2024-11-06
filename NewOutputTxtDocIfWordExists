@@ -20,3 +20,30 @@ print(f"Rows containing the word '{search_word}' have been exported to '{output_
 #Run the script.
 
 #This script will read the input document line by line, check if the specified word is present in each line, and if so, write that line to the output document.
+
+#For an example
+
+def parse_document(input_file, search_word, output_file):
+    with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
+        for line in infile:
+            if search_word in line:
+                outfile.write(line)
+
+# Example usage"
+input_file = "textcheck.txt"  # Path to the input document
+search_word = 'exempt'   # Word to search for
+output_file = "textcheck2.txt"  # Path to the output document
+
+parse_document(input_file, search_word, output_file)
+print(f"Rows containing the word '{search_word}' have been exported to '{output_file}'.")
+
+#How to Use This Script:
+#Save your input document as a text file (e.g., input.txt).
+
+#Modify the input_file, search_word, and output_file variables as needed.
+
+#Run the script.
+
+#This script will read the input document line by line, check if the specified word is present in each line, and if so, write that line to the output document.
+
+#This script will scan textcheck for rows with exemption in it and output it to textcheck2
